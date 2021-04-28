@@ -402,6 +402,14 @@ artifacts = {
             "@io_bazel_rules_scala_scopt",
         ],
     },
+    "io_bazel_rules_scala_finagle_core": {
+        "artifact" : "com.twitter:finagle-core_2.12:19.9.0",
+        "sha256" : "",
+    },
+    "io_bazel_rules_scala_finagle_thrift": {
+        "artifact" : "com.twitter:finagle-thrift_2.12:19.9.0",
+        "sha256" : "",
+    },
     "io_bazel_rules_scala_util_core": {
         "artifact": "com.twitter:util-core_2.12:21.2.0",
         "sha256": "5d4ed75a26a3a2cc7fdc1dbeb29878a70024a8b7864287ed1e182dbca9c775a5",

@@ -54,6 +54,8 @@ def twitter_scrooge(
         # Therefore we leave them None here.
         libthrift = None,
         scrooge_core = None,
+        finagle_core = None,
+        finagle_thrift = None,
         scrooge_generator = None,
         util_core = None,
         util_logging = None):
@@ -77,6 +79,22 @@ def twitter_scrooge(
         scrooge_generator,
         "io_bazel_rules_scala_scrooge_generator",
         "io_bazel_rules_scala/dependency/thrift/scrooge_generator",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_core,
+        "io_bazel_rules_scala_finagle_core",
+        "io_bazel_rules_scala/dependency/thrift/finagle_core",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_finagle_thrift",
+        "io_bazel_rules_scala/dependency/thrift/finagle_thrift",
         overriden_artifacts,
         maven_servers,
     )

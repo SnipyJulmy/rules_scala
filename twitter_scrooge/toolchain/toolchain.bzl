@@ -1,8 +1,5 @@
 load("@io_bazel_rules_scala//scala:providers.bzl", "DepsInfo")
-load(
-    "@io_bazel_rules_scala//scala/private/toolchain_deps:toolchain_deps.bzl",
-    "expose_toolchain_deps",
-)
+load("@io_bazel_rules_scala//scala/private/toolchain_deps:toolchain_deps.bzl", "expose_toolchain_deps")
 
 def _scrooge_toolchain_impl(ctx):
     toolchain = platform_common.ToolchainInfo(
