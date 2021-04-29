@@ -22,6 +22,13 @@ declare_deps_provider(
         "//external:io_bazel_rules_scala/dependency/thrift/libthrift",
         "//external:io_bazel_rules_scala/dependency/thrift/scrooge_core",
         "//external:io_bazel_rules_scala/dependency/thrift/util_core",
+        "//external:io_bazel_rules_scala/dependency/thrift/finagle_thrift",
+        "//external:io_bazel_rules_scala/dependency/thrift/finagle_stats",
+        "//external:io_bazel_rules_scala/dependency/thrift/finagle_core",
+        "//external:io_bazel_rules_scala/dependency/thrift/util_stats",
+        "//external:io_bazel_rules_scala/dependency/thrift/circe_core",
+        "//external:io_bazel_rules_scala/dependency/thrift/circe_parser",
+        "//external:io_bazel_rules_scala/dependency/thrift/cats_core",
         "//scala/private/toolchain_deps:scala_library_classpath",
     ],
 )
@@ -33,6 +40,7 @@ declare_deps_provider(
     deps = [
         "//external:io_bazel_rules_scala/dependency/thrift/libthrift",
         "//external:io_bazel_rules_scala/dependency/thrift/scrooge_core",
+        "//external:io_bazel_rules_scala/dependency/thrift/finagle_thrift",
         "//scala/private/toolchain_deps:scala_library_classpath",
     ],
 )
@@ -43,6 +51,7 @@ declare_deps_provider(
     visibility = ["//visibility:public"],
     deps = [
         "//external:io_bazel_rules_scala/dependency/thrift/scrooge_generator",
+        "//external:io_bazel_rules_scala/dependency/thrift/finagle_thrift",
     ],
 )
 
@@ -54,6 +63,7 @@ declare_deps_provider(
         "//external:io_bazel_rules_scala/dependency/thrift/mustache",
         "//external:io_bazel_rules_scala/dependency/thrift/scopt",
         "//external:io_bazel_rules_scala/dependency/thrift/scrooge_generator",
+        "//external:io_bazel_rules_scala/dependency/thrift/finagle_thrift",
         "//external:io_bazel_rules_scala/dependency/thrift/util_core",
         "//external:io_bazel_rules_scala/dependency/thrift/util_logging",
         "//scala/private/toolchain_deps:parser_combinators",

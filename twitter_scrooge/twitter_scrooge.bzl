@@ -59,6 +59,7 @@ def twitter_scrooge(
         scrooge_generator = None,
         util_core = None,
         util_logging = None):
+
     _declare_and_bind(
         libthrift,
         "libthrift",
@@ -95,6 +96,77 @@ def twitter_scrooge(
         finagle_thrift,
         "io_bazel_rules_scala_finagle_thrift",
         "io_bazel_rules_scala/dependency/thrift/finagle_thrift",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_finagle_stats",
+        "io_bazel_rules_scala/dependency/thrift/finagle_stats",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_finagle_core",
+        "io_bazel_rules_scala/dependency/thrift/finagle_core",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_finagle_thrift",
+        "io_bazel_rules_scala/dependency/thrift/finagle_thrift",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_scrooge_core",
+        "io_bazel_rules_scala/dependency/thrift/scrooge_core",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_util_stats",
+        "io_bazel_rules_scala/dependency/thrift/util_stats",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_circe_core",
+        "io_bazel_rules_scala/dependency/thrift/circe_core",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_circe_parser",
+        "io_bazel_rules_scala/dependency/thrift/circe_parser",
+        overriden_artifacts,
+        maven_servers,
+    )
+
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_libthrift",
+        "io_bazel_rules_scala/dependency/thrift/libthrift",
+        overriden_artifacts,
+        maven_servers,
+    )
+    _declare_and_bind(
+        finagle_thrift,
+        "io_bazel_rules_scala_cats_core",
+        "io_bazel_rules_scala/dependency/thrift/cats_core",
         overriden_artifacts,
         maven_servers,
     )
@@ -192,7 +264,8 @@ def _generate_jvm_code(ctx, label, compile_thrifts, include_thrifts, jar_output,
 
     compiler_args = getattr(ctx.rule.attr, "compiler_args", [])
     lang_flag = ["--language", language]
-    flags = compiler_args + lang_flag
+    lib_flag = ["--finagle"]
+    flags = compiler_args + lang_flag + lib_flag
 
     worker_content = "{output}\n{paths}\n{flags}".format(
         output = jar_output.path,

@@ -402,13 +402,49 @@ artifacts = {
             "@io_bazel_rules_scala_scopt",
         ],
     },
-    "io_bazel_rules_scala_finagle_core": {
-        "artifact" : "com.twitter:finagle-core_2.12:19.9.0",
+    "io_bazel_rules_scala_finagle_stats": {
+        "artifact" : "com.twitter:finagle-stats_2.12:20.9.0",
         "sha256" : "",
     },
-    "io_bazel_rules_scala_finagle_thrift": {
-        "artifact" : "com.twitter:finagle-thrift_2.12:19.9.0",
+    "io_bazel_rules_scala_finagle_stats_core": {
+        "artifact" : "com.twitter:finagle-stats-core_2.12:20.9.0",
         "sha256" : "",
+    },
+    "io_bazel_rules_scala_finagle_http": {
+        "artifact" : "com.twitter:finagle-http_2.12:20.9.0",
+        "sha256" : "",
+    },
+    "io_bazel_rules_scala_logback_classic": {
+        "artifact" : "ch.qos.logback:logback-classic:1.2.3",
+        "sha256" : ""
+    },
+    "io_bazel_rules_scala_finagle_core": {
+        "artifact" : "com.twitter:finagle-core_2.12:20.9.0",
+        "sha256" : "" 
+    },
+    "io_bazel_rules_scala_finagle_thrift": {
+        "artifact" : "com.twitter:finagle-thrift_2.12:20.9.0",
+        "sha256" : ""
+    },
+    "io_bazel_rules_scala_util_stats": {
+        "artifact" : "com.twitter:util-stats_2.12:19.9.0",
+        "sha256" : "" 
+    },
+    "io_bazel_rules_scala_circe_core": {
+        "artifact" : "io.circe:circe-core_2.12:0.13.0",
+        "sha256" : "" 
+    },
+    "io_bazel_rules_scala_circe_parser": {
+        "artifact" : "io.circe:circe-parser_2.12:0.13.0",
+        "sha256" : ""
+    },
+    "io_bazel_rules_scala_libthrift": {
+        "artifact" : "org.apache.thrift:libthrift:0.12.0",
+        "sha256" : ""
+    },
+    "io_bazel_rules_scala_cats_core": {
+        "artifact" : "org.typelevel:cats-core_2.12:2.1.0",
+        "sha256" : ""
     },
     "io_bazel_rules_scala_util_core": {
         "artifact": "com.twitter:util-core_2.12:21.2.0",
